@@ -1,6 +1,24 @@
-h1
-{
+
+h1{
 	color:#808080;
+	font-family:"Arial", Sans-serif;
+	text-align:center;
+}
+.activelist{
+	border: 1px solid gray;
+	position:absolute;
+	right:25%;
+	width:50%
+}
+.rowb{
+	background-color:white;
+	color:gray;
+	font-family:"Arial", Sans-serif;
+	text-align:center;
+}
+.rowa{
+	background-color:gray;
+	color:white;
 	font-family:"Arial", Sans-serif;
 	text-align:center;
 }
