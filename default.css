@@ -4,6 +4,11 @@ h1{
 	font-family:"Arial", Sans-serif;
 	text-align:center;
 }
+h3{
+	color:white;
+	font-family:"Arial", Sans-serif;
+	text-align:center;
+}
 form{
 	display:inline-block;
 }
@@ -28,14 +33,6 @@ form{
 	color:white;
 	font-family:"Arial", Sans-serif;
 	text-align:center;
-}
-
-.rowb{
-	background-color:white;
-	color:gray;
-	font-family:"Arial", Sans-serif;
-	text-align:center;
-	
 }
 .rowa{
 	background-color:gray;
@@ -98,15 +95,9 @@ form{
 	margin-top:0px;
 }
 
-#listPanel{
-position:absolute;
-left:0%;
-width:15%;
-border:solid;
-}
 .listElement{
 	position:absolute;
-	right:0px;
+	left:0px;
 	border:solid;
 }
 .remove{
@@ -132,7 +123,25 @@ border:solid;
 	font-family:"Arial", Sans-serif;
 	text-align:center;
 }
-
+.activelist{
+	text-align:center;
+}
+.hideButton{
+	position:absolute;
+	left:0px;
+	bottom:0px;
+	display:inline-block;
+	height:20px;
+	width:70px;
+	background-color:gray;
+	font-family:"Arial";
+	color:"white";
+	border-radius: 5px;
+	text-allign:center;
+	margin-top:0px;
+	border-color:white;
+	border:solid;
+}
 
 
 
