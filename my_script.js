@@ -1,25 +1,27 @@
 $(document).ready(function(){
 	//$('h1').fadeOut();
-	var rowCount=1;
 	$('#enterButton').click(function(){
 			var taskEntry = $('input[name=listEntry]').val();
+			$(".activelist").append(
+				'<tr class="rowa"> <td><div class="remove"></div>' +taskEntry+'<div class="uncheckbox"></div> </td> </tr>');
+	});
 
-			if(rowCount===0)
-			{
-				$(".activelist").append(
-				'<tr class="rowa"> <td>'+taskEntry+'<div class="uncheckbox"></div> </td> </tr>');
-				rowCount=1;
-			}
-			else{
-				$(".activelist").append(
-					'<tr class="rowb"> <td>'+taskEntry+' <div class="uncheckbox"></div> </td> </tr>');
-					rowCount=0;
-					}
-			$(".uncheckbox").on('click',function() {
-				console.log("clicked");				
-				$(this).toggleClass("checkedbox");
-			});
-		});
 	
+	$(document).on('click', '.uncheckbox',function() {
+		console.log("clicked");				
+		$(this).toggleClass("checkedbox");
+	});
+	$(document).on('click','.remove',function(){
+		$(this).parent().parent().remove();
+		});
+	$('#newListButton').click(function(){
+			var listName = $('input[name=listNameEntry]').val();
+			
+	});
+
+$('#doneText').click(function(){
+		$('.checkedbox').parent().parent().remove();
+	});
+
 });
 
