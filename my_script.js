@@ -2,6 +2,9 @@ $(document).ready(function(){
 	//$('h1').fadeOut();
 	$('#enterButton').click(function(){
 			var taskEntry = $('input[name=listEntry]').val();
+			if(taskEntry===""){
+				taskEntry="Blank Task";
+			}
 			$(".activelist").append(
 				'<tr class="rowa"> <td><div class="remove"></div>' +taskEntry+'<div class="uncheckbox"></div> </td> </tr>');
 	});
@@ -14,9 +17,11 @@ $(document).ready(function(){
 	$(document).on('click','.remove',function(){
 		$(this).parent().parent().remove();
 		});
-	$('#newListButton').click(function(){
+	$('#nameListButton').click(function(){
 			var listName = $('input[name=listNameEntry]').val();
-			
+			if(listName===""){
+				listName="List Name";
+			}
 	});
 
 $('#doneText').click(function(){
