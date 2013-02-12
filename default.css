@@ -18,18 +18,16 @@ form{
 	text-allign:center;
 	margin-top:2px;
 }
-.activelist{
-	border: 1px solid gray;
+
+#taskGenerator{
+	border:1px solid gray;
 	position:absolute;
 	right:25%;
-	width:50%
-}
-.hiddenlist{
-	border: 1px solid gray;
-	position:absolute;
-	right:25%;
-	width:50%
-	visibility: hidden;
+	width:50%;
+	background-color:gray;
+	color:white;
+	font-family:"Arial", Sans-serif;
+	text-align:center;
 }
 
 .rowb{
@@ -99,22 +97,17 @@ form{
 	text-allign:center;
 	margin-top:0px;
 }
-#nameListButton{
-	display:inline-block;
-	height:20px;
-	width:80px;
-	background-color:gray;
-	font-family:"Arial";
-	color:"white";
-	border-radius: 5px;
-	text-allign:center;
-	margin-top:0px;
-}
+
 #listPanel{
 position:absolute;
 left:0%;
 width:15%;
 border:solid;
+}
+.listElement{
+	position:absolute;
+	right:0px;
+	border:solid;
 }
 .remove{
 	height:10px;
@@ -129,7 +122,16 @@ border:solid;
 	border-radius:5px;
 
 }
-
+#activearea{
+	border:1px solid gray;
+	position:absolute;
+	right:25%;
+	width:50%;
+	background-color:gray;
+	color:white;
+	font-family:"Arial", Sans-serif;
+	text-align:center;
+}
 
 
 
