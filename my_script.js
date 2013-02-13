@@ -28,8 +28,8 @@ $('#newlistbutton').click(function(){
 $(document).on('click','.listElement',function(){
 	currentList=$(this).attr("id");
 	console.log(currentList);
-	$(this).siblings().children(".listDivs").hide();
-	$(this).children().show("drop");
+	$(this).siblings().children(".listDivs").hide("highlight");
+	$(this).children().show("highlight");
 	
 });
 
@@ -47,17 +47,19 @@ $(document).on('click','#enterbutton',function(){
 	$(document).on('click', '.uncheckbox',function() {			
 		$(this).toggleClass("checkedbox");
 	});
+
+
 //Removes  the checked boxes of each item in class .checkedbox
 $('#donetext').click(function(){
-		$('.checkedbox').parent().remove();
+		$('.checkedbox').parent().hide("highlight",function(){
+			$('.checkedbox').parent().remove()});
 	});
-//This removes the table row of each clicked remove button
+//This removes the row of each clicked remove button
 	$(document).on('click','.remove',function(){
-		$(this).parent().remove();
-		});
+		$(this).parent().remove()});
+//removes lists
 	$(document).on('click','.removeList',function(){
-		$(this).parent().remove();
-		});
+		$(this).parent().remove()});
 
 	//observes changes to head and body and stores to local storage
 	/*
