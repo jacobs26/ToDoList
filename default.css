@@ -4,11 +4,11 @@ h1{
 	font-family:"Arial", Sans-serif;
 	text-align:center;
 }
-/**h3{
-	color:white;
+h3{
+	color:gray;
 	font-family:"Arial", Sans-serif;
 	text-align:center;
-}**/
+}
 form{
 	display:inline-block;
 }
@@ -34,17 +34,7 @@ form{
 	font-family:"Arial", Sans-serif;
 	text-align:center;
 }
-.rowa{
-	background-color:gray;
-	color:white;
-	font-family:"Arial", Sans-serif;
-	text-align:center;
-	
-}
-.doneBox{
-	position:absolute;
-	right:20px;
-}
+
 #doneText
 {
 	background-color:black;
@@ -96,9 +86,7 @@ form{
 }
 
 .listElement{
-	position:absolute;
-	left:0px;
-	border:solid;
+	border:solid:
 }
 .remove{
 	height:10px;
@@ -140,10 +128,12 @@ form{
 	border-color:white;
 	border:solid;
 }
-.listBox{
-border:solid;
-border-color:white;
+.listDivs{
+	border:solid;
+	border-width:1px;
 }
+
+
 
 
 
