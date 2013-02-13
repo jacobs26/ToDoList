@@ -1,12 +1,13 @@
 $(document).ready(function(){
 
+/*
 //checking to see if a previous sessioin for the site has been logged
 	if(localStorage.lastSessionBody)
 		{
 			$('head').html(localStorage.lastSessionHead);
 			$('body').html(localStorage.lastSessionBody);
 		}
-
+*/
 
 //this variable stores the id of the list currently active
 var currentList;
@@ -18,7 +19,8 @@ $('#newlistbutton').click(function(){
 			}
 		listNameId=listName.replace(/\s/g, "");
 		$('#activearea').append('<div class="listElement" id="'+listNameId+'"></div>');
-		$('#'+listNameId).append('<h3 class="headers">'+listName+'</h3> <hr>');
+		$('#'+listNameId).append('<h3 class="headers">'+listName+'</h3>');
+		$('#'+listNameId).append('<div class="removeList"><div>');
 		currentList = listNameId;
 		
 	});
@@ -53,8 +55,12 @@ $('#donetext').click(function(){
 	$(document).on('click','.remove',function(){
 		$(this).parent().remove();
 		});
+	$(document).on('click','.removeList',function(){
+		$(this).parent().remove();
+		});
 
 	//observes changes to head and body and stores to local storage
+	/*
 	MutationObserver = window.MutationObserver || WebKitMutationObserver;
 		var changeObserver=new MutationObserver(function(){
 			localStorage.lastSessionHead = $('head').html();
@@ -66,7 +72,7 @@ $('#donetext').click(function(){
 		attribute:true,
 		childList:true
 		});
-	
+	*/
 
 });
 
