@@ -1,28 +1,34 @@
 $(document).ready(function(){
-	
 
-//Creates a new list and appeneds it to the active area
+var currentList;
+//Creates a new list and appeneds it to the active area,hiding old lists
+
 $('#newListButton').click(function(){
-		$('#activearea table').hide();
+		//$('#activearea div').hide();
 		var listName = $('input[name=listNameEntry]').val();
 			if(listName===""){
 				listName="List Name";
 			}
 		listNameId=listName.replace(/\s/g, "");
-		$('#activearea').append('<div id="'+listNameId+'"> </div>');
-		$('#'+listNameId).append('<h3>'+listName+'</h3>');
-		//$('#listPanel').append('<div class="listElement" id="'+listNameId+'">'+listName+'</div>');
-		//tableListId="table"+listNameId;
-		$('#'+listNameId).append('<table> </table>');
-		$('#'+listNameId).append('<div class="hideButton">'+listName+'</div>');
+		$('#activearea').append('<div id="'+listNameId+'"></div>');
+		$('#'+listNameId).append('<hr> <h3 class="headers">'+listName+'</h3> <hr>');
+		$('#'+listNameId).append('<table class="listTable"></table>');
+		currentList=
 	});
 
-$('#enterButton').click(function(){
+$(document).on('click','.headers',function(){
+	console.log("here");
+	$(this).siblings().show();
+	$(this).parent().siblings().children(".listTable").hide();
+	//$(this).parent().addClass('.currentList');
+});
+
+$(document).on('click','#enterButton',function(){
 			var taskEntry = $('input[name=listEntry]').val();
 			if(taskEntry===""){
 				taskEntry="Blank Task";
 			}
-			$("#"+tableListId).append(
+			$('.currentList').children('.listTable').append(
 				'<tr><td class="rowa"><div class="remove"></div>'+taskEntry+'<div class="uncheckbox"></div> </td> </tr>');
 		});
 

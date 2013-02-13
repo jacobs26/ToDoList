@@ -4,11 +4,11 @@ h1{
 	font-family:"Arial", Sans-serif;
 	text-align:center;
 }
-h3{
+/**h3{
 	color:white;
 	font-family:"Arial", Sans-serif;
 	text-align:center;
-}
+}**/
 form{
 	display:inline-block;
 }
@@ -118,8 +118,7 @@ form{
 	position:absolute;
 	right:25%;
 	width:50%;
-	background-color:gray;
-	color:white;
+	color:black;
 	font-family:"Arial", Sans-serif;
 	text-align:center;
 }
@@ -132,7 +131,6 @@ form{
 	bottom:0px;
 	display:inline-block;
 	height:20px;
-	width:70px;
 	background-color:gray;
 	font-family:"Arial";
 	color:"white";
@@ -142,6 +140,11 @@ form{
 	border-color:white;
 	border:solid;
 }
+.listBox{
+border:solid;
+border-color:white;
+}
+
 
 
 
