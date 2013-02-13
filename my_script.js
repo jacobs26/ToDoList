@@ -1,4 +1,13 @@
 $(document).ready(function(){
+
+//checking to see if a previous sessioin for the site has been logged
+	if(localStorage.lastSessionBody)
+		{
+			$('head').html(localStorage.lastSessionHead);
+			$('body').html(localStorage.lastSessionBody);
+		}
+
+
 //this variable stores the id of the list currently active
 var currentList;
 //Creates a new list and appends it to the active area, 
@@ -18,7 +27,7 @@ $(document).on('click','.listElement',function(){
 	currentList=$(this).attr("id");
 	console.log(currentList);
 	$(this).siblings().children(".listDivs").hide();
-	$(this).children().show();
+	$(this).children().show("drop");
 	
 });
 
@@ -44,5 +53,20 @@ $('#donetext').click(function(){
 	$(document).on('click','.remove',function(){
 		$(this).parent().remove();
 		});
+
+	//observes changes to head and body and stores to local storage
+	MutationObserver = window.MutationObserver || WebKitMutationObserver;
+		var changeObserver=new MutationObserver(function(){
+			localStorage.lastSessionHead = $('head').html();
+			localStorage.lastSessionBody=$('body').html();
+		});
+
+	changeObserver.observe(document,{
+		subtree:true,
+		attribute:true,
+		childList:true
+		});
+	
+
 });
 
