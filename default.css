@@ -12,7 +12,7 @@ h3{
 form{
 	display:inline-block;
 }
-#enterButton{
+#enterbutton{
 	display:inline-block;
 	height:20px;
 	width:70px;
@@ -24,7 +24,7 @@ form{
 	margin-top:2px;
 }
 
-#taskGenerator{
+#taskgenerator{
 	border:1px solid gray;
 	position:absolute;
 	right:25%;
@@ -35,7 +35,7 @@ form{
 	text-align:center;
 }
 
-#doneText
+#donetext
 {
 	background-color:black;
 	height:20px;
@@ -68,12 +68,12 @@ form{
 	margin-top:2px;
 	background-color:red;
 }
-#listNameEntry{
+#listnameentry{
 	height:30px;
 	position:absolute;
 	left:25%;
 }
-#newListButton{
+#newlistbutton{
 	display:inline-block;
 	height:20px;
 	width:70px;
